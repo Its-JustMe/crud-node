@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const moment = require("moment");
-const tarefasController = require("../controllers/tarefasController");
+const controller = require("../controllers/controller");
 
 router.get("/",  function (req, res) {
    tarefasController.listarTarefasPaginadas(req, res);

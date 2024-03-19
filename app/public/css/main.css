@@ -1,0 +1,10 @@
+@import './modal_cadastro.css';
+
+body {
+    font-family: "Typo Formal";
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    overflow-x: hidden;
+}
