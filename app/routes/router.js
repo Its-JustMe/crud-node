@@ -4,23 +4,23 @@ const moment = require("moment");
 const controller = require("../controllers/controller");
 
 router.get("/",  function (req, res) {
-   tarefasController.listarTarefasPaginadas(req, res);
+   controller.listarTarefasPaginadas(req, res);
 });
 
 router.get("/editar", function (req, res) {
-  tarefasController.exibirTarefaId(req, res);
+  controller.exibirTarefaId(req, res);
 });
 
 router.get("/excluir", function (req, res) {
-  tarefasController.excluirTarefa(req, res);
+  controller.excluirTarefa(req, res);
 });
 
 router.get("/finalizar", function (req, res) {
-  tarefasController.finalizarTarefa(req, res);
+  controller.finalizarTarefa(req, res);
 });
 
 router.get("/iniciar", function (req, res) {
-  tarefasController.iniciarTarefa(req, res);
+  controller.iniciarTarefa(req, res);
 });
 
 router.get("/adicionar", function (req, res) {
@@ -28,8 +28,8 @@ router.get("/adicionar", function (req, res) {
   res.render("pages/adicionar", { dados: null, listaErros: null });
 });
 
-router.post("/adicionar", tarefasController.regrasValidacao, function (req, res) {
-    tarefasController.adicionarTarefa(req, res);
+router.post("/adicionar", controller.regrasValidacao, function (req, res) {
+    controller.adicionarTarefa(req, res);
   }
 );
 
