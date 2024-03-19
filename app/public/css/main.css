@@ -1,5 +1,10 @@
 @import './modal_cadastro.css';
 
+@font-face {
+    font-family: "Typo Formal";
+    src: url('../fonts/typo_formal.otf');
+}
+
 body {
     font-family: "Typo Formal";
     font-size: larger;
