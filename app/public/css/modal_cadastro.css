@@ -3,7 +3,6 @@ input:focus, textarea:focus {
 }
 
 h1 {
-  text-align: center;
   font-size: 2.5em;
 }
 .input-container {
@@ -86,14 +85,14 @@ input[type="radio"]:checked:after {
   display: flex;
   gap: 1em;
 }
-button {
+.form-btn {
   width: 5em;
   height: 2.5em;
   border-radius: 4px;
   cursor: pointer;
   background: #eeeeee;
 }
-button:hover {
+.form-btn:hover {
   background: #e2e2e2;
 }
 
