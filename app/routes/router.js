@@ -2,9 +2,10 @@ const express = require("express");
 const router = express.Router();
 const moment = require("moment");
 const controller = require("../controllers/controller");
+const { validationResult } = require("express-validator");
 
 router.get("/",  function (req, res) {
-  res.render("pages/index", { dados: null, listaErros: null });
+  res.render("pages/index", { paginas: ['tabela'],dados: null, listaErros: null });
 });
 
 router.get("/editar", function (req, res) {
@@ -23,15 +24,21 @@ router.get("/iniciar", function (req, res) {
   
 });
 
-router.get("/adicionar", function (req, res) {
+router.get("/create", function (req, res) {
   res.locals.moment = moment;
-  res.render("pages/adicionar", { dados: null, listaErros: null });
+  res.render("pages/index", { paginas: ['create', 'tabela'], dados: null, listaErros: null });
 });
 
-router.post("/adicionar", controller.regrasValidacao, function (req, res) {
-    
+router.post("/create", controller.regrasValidacao, function (req, res) {
+  const erros = validationResult(req);
+
+  if (!erros.isEmpty()) {
+    res.locals.moment = moment;
+    return res.render("pages/index", { paginas: ['create', 'tabela'], dados: req.body, listaErros: erros });
   }
-);
+  console.log(req.body);
+  return res.render("pages/index", { paginas: ['create', 'tabela'], dados: req.body, listaErros: null });
+});
 
 
 module.exports = router;

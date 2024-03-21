@@ -1,4 +1,4 @@
-var pool = require("../../config/pool_conexoes");
+const pool = require("../../config/pool_conexoes");
 
 const tarefasModel = {
     findAll: async () => {
@@ -18,8 +18,6 @@ const tarefasModel = {
             return error;
         }
     },
-
-   
 
     create: async (dadosForm) => {
         try {
@@ -62,5 +60,4 @@ const tarefasModel = {
   
 };
     
-
 module.exports = tarefasModel
