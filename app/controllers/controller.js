@@ -16,7 +16,7 @@ const controller = {
 
   listarFuncionarios: (req, res) => {
     try {
-      const results = models.findAll();
+      const results = await models.findAll();
       console.log(results);
       res.render("pages/index", { tarefas: results, paginas: ['tabela'],dados: null, listaErros: null });
     } catch (e) {
