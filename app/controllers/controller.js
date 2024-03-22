@@ -1,8 +1,7 @@
 const models = require("../models/models");
-const moment = require("moment");
 const { body, validationResult } = require("express-validator");
 
-const tarefasController = {
+const controller = {
   regrasValidacao: [
     body(
       'nome'
@@ -15,20 +14,18 @@ const tarefasController = {
     ).isNumeric().withMessage('Insira um valor de salário válido')
   ],
 
-  /*listarFuncionarios: () => {
+  listarFuncionarios: (req, res) => {
     try {
-      results = await models.findAll();
-      res.render("pages/index", { funcionarios: results });
+      const results = models.findAll();
+      console.log(results);
+      res.render("pages/index", { tarefas: results, paginas: ['tabela'],dados: null, listaErros: null });
     } catch (e) {
-      console.log(e); // exibir os erros no console do vs code
+      console.log(e);
       res.json({ erro: "Falha ao acessar dados" });
     }
-  },*/
+  },
 
-  incluirFuncionario: (dadosForm) => {
-    models.create(dadosForm);
-  }
-  
+  adicionarFuncionario: (dados) => models.create(dados),
 };
 
-module.exports = tarefasController;
+module.exports = controller;
