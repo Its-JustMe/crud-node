@@ -15,7 +15,7 @@ const tarefasController = {
     ).isNumeric().withMessage('Insira um valor de salário válido')
   ],
 
-  listarFuncionarios: () => {
+  /*listarFuncionarios: () => {
     try {
       results = await models.findAll();
       res.render("pages/index", { funcionarios: results });
@@ -23,10 +23,10 @@ const tarefasController = {
       console.log(e); // exibir os erros no console do vs code
       res.json({ erro: "Falha ao acessar dados" });
     }
-  },
+  },*/
 
   incluirFuncionario: (dadosForm) => {
-    
+    models.create(dadosForm);
   }
   
 };

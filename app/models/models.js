@@ -3,7 +3,7 @@ const pool = require("../../config/pool_conexoes");
 const models = {
     findAll: async () => {
         try {
-            const [linhas] = await pool.query('SELECT * FROM funcionarios WHERE status_tarefa = 1')
+            const [linhas] = await pool.query('SELECT * FROM funcionarios')
             return linhas;
         } catch (error) {
             return error;
@@ -12,7 +12,7 @@ const models = {
 
     findId: async (id) => {
         try {
-            const [linhas,campos] = await pool.query('SELECT * FROM funcionarios WHERE status_tarefa = 1 and id_tarefa = ?',[id] )
+            const [linhas,campos] = await pool.query('SELECT * FROM funcionarios and id_usuario = ?',[id] )
             return linhas;
         } catch (error) {
             return error;
@@ -33,7 +33,7 @@ const models = {
 
     update: async (dadosForm, id) => {
         try {
-            const [linhas] = await pool.query('UPDATE funcionarios SET ? WHERE id_tarefa = ?', [dadosForm, id])
+            const [linhas] = await pool.query('UPDATE funcionarios SET ? WHERE id_usuario = ?', [dadosForm, id])
             return linhas;
         } catch (error) {
             return error;
@@ -42,22 +42,12 @@ const models = {
 
     delete: async (id) => {
         try {
-            const [linhas] = await pool.query('UPDATE funcionarios SET status_tarefa = 0  WHERE id_tarefa = ?', [id])
-            return linhas;
-        } catch (error) {
-            return error;
-        }  
-    },
-
-    sistuacaoTarefa: async (situacao, id) => {
-        try {
-            const [linhas] = await pool.query('UPDATE funcionarios SET situacao_tarefa = ? WHERE id_tarefa = ?', [situacao, id])
+            const [linhas] = await pool.query('DELETE funcionarios WHERE id_usuario = ?', [id])
             return linhas;
         } catch (error) {
             return error;
         }  
     }
-  
 };
     
 module.exports = models;
