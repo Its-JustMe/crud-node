@@ -21,6 +21,7 @@ const models = {
 
     create: async (dadosForm) => {
         try {
+            console.log(dadosForm)
             const [linhas, campos] = await pool.query('INSERT INTO funcionarios SET ?', [dadosForm]);
             console.log(linhas);
             console.log(campos);
