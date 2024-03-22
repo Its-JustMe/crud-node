@@ -34,6 +34,7 @@ router.post("/create", controller.regrasValidacao, function (req, res) {
 
   if (!erros.isEmpty()) {
     res.locals.moment = moment;
+    controller.adicionarFuncionario(req.body);
     return res.render("pages/index", { paginas: ['create', 'tabela'], dados: req.body, listaErros: erros });
   }
   console.log(req.body);
