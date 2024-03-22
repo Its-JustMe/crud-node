@@ -1,7 +1,7 @@
 const pool = require("../../config/pool_conexoes");
 
 const models = {
-    findAll: async () => {
+    findAll: await function () {
         try {
             const [linhas] = await pool.query('SELECT * FROM tarefas WHERE status_tarefa = 1')
             return linhas;
