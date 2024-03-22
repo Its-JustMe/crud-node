@@ -2,9 +2,12 @@
     <table>
       <thead>
         <tr>
-          <th>Nome</th>
-          <th>Função</th>
-          <th>Salário</th>
+          <% for (let info in lista_funcionarios) { %>
+            <th><%= info %> </th>
+          <% } %>
+        </tr>
+        
+        <tr>
           <th class="acao">Editar</th>
           <th class="acao">Excluir</th>
         </tr>
