@@ -1,9 +1,9 @@
 const pool = require("../../config/pool_conexoes");
 
-const tarefasModel = {
+const models = {
     findAll: async () => {
         try {
-            const [linhas] = await pool.query('SELECT * FROM tarefas WHERE status_tarefa = 1')
+            const [linhas] = await pool.query('SELECT * FROM funcionarios WHERE status_tarefa = 1')
             return linhas;
         } catch (error) {
             return error;
@@ -12,7 +12,7 @@ const tarefasModel = {
 
     findId: async (id) => {
         try {
-            const [linhas,campos] = await pool.query('SELECT * FROM tarefas WHERE status_tarefa = 1 and id_tarefa = ?',[id] )
+            const [linhas,campos] = await pool.query('SELECT * FROM funcionarios WHERE status_tarefa = 1 and id_tarefa = ?',[id] )
             return linhas;
         } catch (error) {
             return error;
@@ -21,7 +21,7 @@ const tarefasModel = {
 
     create: async (dadosForm) => {
         try {
-            const [linhas, campos] = await pool.query('INSERT INTO tarefas SET ?', [dadosForm])
+            const [linhas, campos] = await pool.query('INSERT INTO funcionarios SET ?', [dadosForm])
             console.log(linhas);
             console.log(campos);
             return linhas;
@@ -33,7 +33,7 @@ const tarefasModel = {
 
     update: async (dadosForm, id) => {
         try {
-            const [linhas] = await pool.query('UPDATE tarefas SET ? WHERE id_tarefa = ?', [dadosForm, id])
+            const [linhas] = await pool.query('UPDATE funcionarios SET ? WHERE id_tarefa = ?', [dadosForm, id])
             return linhas;
         } catch (error) {
             return error;
@@ -42,7 +42,7 @@ const tarefasModel = {
 
     delete: async (id) => {
         try {
-            const [linhas] = await pool.query('UPDATE tarefas SET status_tarefa = 0  WHERE id_tarefa = ?', [id])
+            const [linhas] = await pool.query('UPDATE funcionarios SET status_tarefa = 0  WHERE id_tarefa = ?', [id])
             return linhas;
         } catch (error) {
             return error;
@@ -51,7 +51,7 @@ const tarefasModel = {
 
     sistuacaoTarefa: async (situacao, id) => {
         try {
-            const [linhas] = await pool.query('UPDATE tarefas SET situacao_tarefa = ? WHERE id_tarefa = ?', [situacao, id])
+            const [linhas] = await pool.query('UPDATE funcionarios SET situacao_tarefa = ? WHERE id_tarefa = ?', [situacao, id])
             return linhas;
         } catch (error) {
             return error;
@@ -60,4 +60,4 @@ const tarefasModel = {
   
 };
     
-module.exports = tarefasModel
+module.exports = models;
