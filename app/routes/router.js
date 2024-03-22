@@ -24,7 +24,6 @@ router.get("/iniciar", function (req, res) {
 });
 
 router.get("/create", function (req, res) {
-  res.locals.moment = moment;
   res.render("pages/index", { paginas: ['create', 'tabela'], dados: null, listaErros: null });
 });
 
