@@ -14,9 +14,9 @@ const controller = {
     ).isNumeric().withMessage('Insira um valor de salário válido')
   ],
 
-  listarFuncionarios: (req, res) => {
+  listarFuncionarios: async (req, res) => {
     try {
-      const results = models.findAll();
+      const results = await models.findAll();
       console.log(results);
       res.render("pages/index", { tarefas: results, paginas: ['tabela'],dados: null, listaErros: null });
     } catch (e) {
