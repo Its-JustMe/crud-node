@@ -93,7 +93,10 @@ const controller = {
     try {
       const results = await update(dados_form, req.body.id_funcionario);
     } catch (e) {
-      res.json({'erro': e});
+      res.json({
+        id: req.body.id_funcionario,
+        dados: req.body
+      });
     }
 
     res.redirect("/");
