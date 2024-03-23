@@ -4,7 +4,6 @@ const controller = require("../controllers/controller");
 const { validationResult } = require("express-validator");
 
 router.get("/",  function (req, res) {
-  controller.adicionarFuncionario({nome_funcionario: 'Arthur', funcao_funcionario: 'Programador', salario_funcionario: 14});
   controller.listarFuncionarios(req, res);
 });
 

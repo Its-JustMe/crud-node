@@ -11,11 +11,27 @@
             <th><%= info %> </th>
           <% } %>
         </tr>
-        
-        <tr>
-          <th class="acao">Editar</th>
-          <th class="acao">Excluir</th>
-        </tr>
+
+        <% lista_funcionarios.forEach(funcionario => { %>
+          <tr>
+            <th>
+              <%= funcionario.nome_funcionario %>
+            </th>
+
+            <th>
+              <%= funcionario.funcao_funcionario %>
+            </th>
+
+            <th>
+              R$ <%= funcionario.salario_funcionario %>
+            </th>
+          </tr> 
+          
+          <tr>
+            <th class="acao">Editar</th>
+            <th class="acao">Excluir</th>
+          </tr>
+        <% }); %>
       </thead>
       <tbody>
       </tbody>
