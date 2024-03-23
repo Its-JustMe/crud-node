@@ -5,10 +5,10 @@ const controller = {
   regrasValidacao: [
     body(
       'nome_funcionario'
-      ).isAlpha().withMessage('Por favor, insira um nome válido.'),
+      ).isAlpha('pt-BR', {ignore: ' '}).withMessage('Por favor, insira um nome válido.'),
     body(
       'funcao_funcionario'
-      ).isAlpha().withMessage('Por favor, insira uma função válida.'),
+      ).isAlpha('pt-BR', {ignore: ' '}).withMessage('Por favor, insira uma função válida.'),
     body(
       'salario_funcionario'
     ).isNumeric().withMessage('Insira um valor de salário válido')
