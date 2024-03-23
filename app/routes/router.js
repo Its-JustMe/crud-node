@@ -27,7 +27,7 @@ router.post("/create", controller.regrasValidacao, function (req, res) {
   const erros = validationResult(req);
 
   if (!erros.isEmpty()) {
-    return res.render("pages/create", { dados: req.body, listaErros: erros });
+    return res.render("pages/form", { funcao: 'Novo funcionário', acao: 'create', dados: req.body, listaErros: erros });
   }
   console.log(req.body);
   return controller.listarFuncionarios(req, res);
