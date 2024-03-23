@@ -121,6 +121,10 @@ const controller = {
       console.log(e);
       res.json({ erro: "Falha ao acessar dados" });
     }
+  },
+
+  removerFuncionario: (id_funcionario) => {
+    models.delete(id_funcionario);
   }
 };
 
