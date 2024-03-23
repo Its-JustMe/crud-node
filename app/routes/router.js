@@ -8,11 +8,11 @@ router.get("/",  function (req, res) {
 });
 
 router.get("/incluir", function (req, res) {
-  res.render("pages/create", { funcao: 'Novo funcionário', acao: 'Incluir', dados: null, listaErros: null });
+  res.render("pages/create", { funcao: 'Novo funcionário', acao: 'create', dados: null, listaErros: null });
 });
 
 router.get("/editar", function (req, res) {
-  
+  res.render("pages/create", { funcao: 'Editar dados do funcionário', acao: 'update', dados: null, listaErros: null });
 });
 
 router.get("/excluir", function (req, res) {
@@ -27,7 +27,7 @@ router.post("/create", controller.regrasValidacao, function (req, res) {
   const erros = validationResult(req);
 
   if (!erros.isEmpty()) {
-    return res.render("pages/index", { pagina: 'tabela', dados: req.body, listaErros: erros });
+    return res.render("pages/create", { dados: req.body, listaErros: erros });
   }
   console.log(req.body);
   return controller.listarFuncionarios(req, res);
