@@ -6,13 +6,8 @@
           <th>Função</th>
           <th>Salário</th>
         </tr>
-        <tr>
-          <% for (let info in lista_funcionarios) { %>
-            <th><%= info %> </th>
-          <% } %>
-        </tr>
 
-        <% lista_funcionarios.forEach(funcionario => { %>
+        <% lista_funcionarios.forEach(function (funcionario) => { %>
           <tr>
             <th>
               <%= funcionario.nome_funcionario %>
@@ -25,13 +20,11 @@
             <th>
               R$ <%= funcionario.salario_funcionario %>
             </th>
-          </tr> 
-          
-          <tr>
+
             <th class="acao">Editar</th>
             <th class="acao">Excluir</th>
-          </tr>
-        <% }); %>
+          </tr> 
+        <% }); console.log(lista_funcionarios); %>
       </thead>
       <tbody>
       </tbody>
