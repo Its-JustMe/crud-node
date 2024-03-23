@@ -7,7 +7,24 @@
           <th>Salário</th>
         </tr>
 
-        <% console.log(lista_funcionarios); %>
+        <% for (let funcionario of lista_funcionarios) { %>
+          <tr>
+            <th>
+              <%= funcionario.nome_funcionario %>
+            </th>
+
+            <th>
+              <%= funcionario.funcao_funcionario %>
+            </th>
+
+            <th>
+              R$ <%= funcionario.salario_funcionario %>
+            </th>
+
+            <th class="acao">Editar</th>
+            <th class="acao">Excluir</th>
+          </tr> 
+        <% }; %>
       </thead>
       <tbody>
       </tbody>
