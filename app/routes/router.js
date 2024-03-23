@@ -27,6 +27,10 @@ router.post("/create", controller.regrasValidacao, function (req, res) {
   controller.adicionarFuncionario(req, res);
 });
 
+router.post("/update", controller.regrasValidacao, function (req, res) {
+  controller.atualizarDadosFuncionario(req, res);
+});
+
 
 module.exports = router;
 
