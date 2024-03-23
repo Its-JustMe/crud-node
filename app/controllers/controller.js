@@ -92,7 +92,8 @@ const controller = {
   exibirFuncionario: async (req, res) => {
     const { id } = req.query;
     try {
-      let funcionario = await models.findId(id);
+      const funcionario = await models.findId(id);
+      
       res.render("pages/form", {
         funcao: 'Editar dados do funcionário', 
         acao: 'update',

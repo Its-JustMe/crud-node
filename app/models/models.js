@@ -12,7 +12,7 @@ const models = {
 
     findId: async (id) => {
         try {
-            const [linhas,campos] = await pool.query('SELECT * FROM funcionarios WHERE id_tarefa = ?',[id]);
+            const [linhas,campos] = await pool.query('SELECT * FROM funcionarios WHERE id_funcionario = ?',[id]);
             return linhas;
         } catch (error) {
             return error;
@@ -48,7 +48,7 @@ const models = {
         } catch (error) {
             return error;
         }  
-    }
+    },
   
 };
     
