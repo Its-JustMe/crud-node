@@ -17,7 +17,7 @@ const controller = {
   listarFuncionarios: async (req, res) => {
     try {
       const results = await models.findAll();
-      res.render("pages/index", { lista_funcionarios: results, paginas: ['tabela'],dados: null, listaErros: null });
+      res.render("pages/index", { lista_funcionarios: results, pagina: 'tabela', dados: null, listaErros: null });
     } catch (e) {
       console.log(e);
       res.json({ erro: "Falha ao acessar dados" });
