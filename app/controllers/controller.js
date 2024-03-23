@@ -39,7 +39,12 @@ const controller = {
         { 
           funcao: 'Novo funcionário', 
           acao: 'create', 
-          dados: req.body, 
+          dados: {
+            id_funcionario: '',
+            nome_funcionario: req.body.nome_funcionario,
+            funcao_funcionario: req.body.funcao_funcionario,
+            salario_funcionario: req.body.salario_funcionario
+          }, 
           listaErros: erros 
         }
       );
@@ -68,7 +73,12 @@ const controller = {
         { 
           funcao: 'Editar dados do funcionário', 
           acao: 'update', 
-          dados: req.body, 
+          dados: {
+            id_funcionario: req.body.id_funcionario,
+            nome_funcionario: req.body.nome_funcionario,
+            funcao_funcionario: req.body.funcao_funcionario,
+            salario_funcionario: req.body.salario_funcionario
+          }, 
           listaErros: erros 
         }
       );
@@ -93,7 +103,7 @@ const controller = {
     const { id } = req.query;
     try {
       const funcionario = await models.findId(id);
-      
+
       res.render("pages/form", {
         funcao: 'Editar dados do funcionário', 
         acao: 'update',
