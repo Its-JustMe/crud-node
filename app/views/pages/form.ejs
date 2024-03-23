@@ -10,26 +10,25 @@
     <title><%= funcao %></title>
 </head>
 <body>
+    <%= listaErros %>
+    <form action="/<%=acao%>" method="post" id="formulario">
+        <fieldset>
+            <legend><%= funcao %></legend>
     
+            <label for="nome">Nome</label>
+            <input type="text" name="nome_funcionario" id="nome" value="<%= dados.nome_funcionario %>">
+    
+            <label for="funcao">Função</label>
+            <input type="text" name="funcao_funcionario" id="funcao" value="<%= dados.funcao_funcionario %>">
+    
+            <label for="funcao">Salário</label>
+            <input type="number" name="salario_funcionario" id="salario" value="<%= dados.salario_funcionario %>">
+    
+            <div>
+                <button class="form-btn" type="submit" onclick="window.location='/'">Pronto!</button>
+                <button class="form-btn" type="reset">Limpar</button>
+            </div>
+        </fieldset>
+    </form>
 </body>
 </html>
-
-<form action="/<%=acao%>" method="post" id="formulario">
-    <fieldset>
-        <legend><%= funcao %></legend>
-
-        <label for="nome">Nome</label>
-        <input type="text" name="nome_funcionario" id="nome" value="<%= dados.nome_funcionario %>">
-
-        <label for="funcao">Função</label>
-        <input type="text" name="funcao_funcionario" id="funcao" value="<%= dados.funcao_funcionario %>">
-
-        <label for="funcao">Salário</label>
-        <input type="number" name="salario_funcionario" id="salario" value="<%= dados.salario_funcionario %>">
-
-        <div>
-            <button class="form-btn" type="submit" onclick="window.location='/'">Pronto!</button>
-            <button class="form-btn" type="reset">Limpar</button>
-        </div>
-    </fieldset>
-</form>
