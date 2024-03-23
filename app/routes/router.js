@@ -32,7 +32,7 @@ router.post("/create", controller.regrasValidacao, function (req, res) {
   }
   console.log(req.body);
   controller.adicionarFuncionario(req.body);
-  return controller.listarFuncionarios(req, res);
+  controller.listarFuncionarios(req, res);
 });
 
 
