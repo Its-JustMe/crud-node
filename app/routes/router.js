@@ -8,11 +8,11 @@ router.get("/",  function (req, res) {
 });
 
 router.get("/incluir", function (req, res) {
-  res.render("pages/create", { funcao: 'Novo funcionário', acao: 'create', dados: null, listaErros: null });
+  res.render("pages/form", { funcao: 'Novo funcionário', acao: 'create', dados: null, listaErros: null });
 });
 
 router.get("/editar", function (req, res) {
-  res.render("pages/create", { funcao: 'Editar dados do funcionário', acao: 'update', dados: null, listaErros: null });
+  res.render("pages/form", { funcao: 'Editar dados do funcionário', acao: 'update', dados: null, listaErros: null });
 });
 
 router.get("/excluir", function (req, res) {
