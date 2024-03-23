@@ -94,8 +94,7 @@ const controller = {
       const results = await update(dados_form, req.body.id_funcionario);
     } catch (e) {
       res.json({
-        id: req.body.id_funcionario,
-        dados: req.body
+        erro: 'Falha ao acessar os dados.'
       });
     }
 
