@@ -24,7 +24,7 @@ const controller = {
     }
   },
 
-  adicionarFuncionario: async (req, res) => {
+  adicionarFuncionario: (req, res) => {
     const erros = validationResult(req);
 
     if (!erros.isEmpty()) {
@@ -38,7 +38,7 @@ const controller = {
       );
 
       try {
-        const results = await models.create(req.body);
+        const results = models.create(req.body);
       } catch (e) {
         res.json({'Erro': 'Não foi possível acessar os dados.'})
       }
