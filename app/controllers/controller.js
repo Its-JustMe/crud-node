@@ -24,7 +24,28 @@ const controller = {
     }
   },
 
-  adicionarFuncionario: (dados) => models.create(dados),
+  adicionarFuncionario: (req, res) => {
+    const erros = validationResult(req);
+
+    if (!erros.isEmpty()) {
+      return res.render("pages/form", 
+        { 
+          funcao: 'Novo funcionário', 
+          acao: 'create', 
+          dados: req.body, 
+          listaErros: erros 
+        }
+      );
+
+      try {
+        const results = await models.create(req.body);
+      } catch (e) {
+        console.log(e);
+      }
+
+      res.redirect('/');
+    }
+  },
 };
 
 module.exports = controller;
