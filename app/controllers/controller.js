@@ -40,10 +40,10 @@ const controller = {
       try {
         const results = await models.create(req.body);
       } catch (e) {
-        console.log(e);
+        res.json({'Erro': 'Não foi possível acessar os dados.'})
       }
 
-      res.redirect('/');
+      res.redirect("/");
     }
   },
 };
