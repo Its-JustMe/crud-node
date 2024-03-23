@@ -9,6 +9,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all .8s;
+
+  font-family: "Typo Formal";
 }
 input:focus, textarea:focus {
   outline: 0;
