@@ -8,11 +8,11 @@ router.get("/",  function (req, res) {
 });
 
 router.get("/incluir", function (req, res) {
-  res.render("pages/form", { funcao: 'Novo funcionário', acao: 'create', dados: {nome_funcionario: '', funcao_funcionario: '', salario_funcionario: ''}, listaErros: null });
+  res.render("pages/form", { funcao: 'Novo funcionário', acao: 'create', dados: {id_funcionario: '', nome_funcionario: '', funcao_funcionario: '', salario_funcionario: ''}, listaErros: null });
 });
 
 router.get("/editar", function (req, res) {
-  res.render("pages/form", { funcao: 'Editar dados do funcionário', acao: 'update', dados: {nome_funcionario: '', funcao_funcionario: '', salario_funcionario: ''}, listaErros: null });
+  controller.exibirFuncionario(req, res);
 });
 
 router.get("/excluir", function (req, res) {

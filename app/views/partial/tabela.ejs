@@ -21,8 +21,12 @@
               R$ <%= String(funcionario.salario_funcionario).replace('.', ',') %>
             </th>
 
-            <th class="acao">Editar</th>
-            <th class="acao">Excluir</th>
+            <th class="acao" onclick=<%="window.location='/editar?id="+ funcionario.id_funcionario+"'" %>>
+              <button>Editar</button>
+            </th>
+            <th class="acao" onclick=<%=" window.location='/excluir?id="+ funcionario.id_funcionario+"'" %>>
+              <button>Excluir</button>
+            </th>
           </tr> 
         <% }; %>
       </thead>
