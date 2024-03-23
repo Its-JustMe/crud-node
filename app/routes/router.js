@@ -4,7 +4,7 @@ const controller = require("../controllers/controller");
 const { validationResult } = require("express-validator");
 
 router.get("/",  function (req, res) {
-  controller.listarFuncionarios(req, res);
+  res.render("pages/form", { funcao: 'Novo funcionário', acao: 'create', dados: null, listaErros: null });
 });
 
 router.get("/incluir", function (req, res) {
