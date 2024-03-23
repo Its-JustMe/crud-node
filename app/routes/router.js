@@ -16,7 +16,7 @@ router.get("/editar", function (req, res) {
 });
 
 router.get("/excluir", function (req, res) {
-  
+  controller.removerFuncionario(req, res);
 });
 
 router.get("/finalizar", function (req, res) {

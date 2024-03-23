@@ -123,8 +123,10 @@ const controller = {
     }
   },
 
-  removerFuncionario: (id_funcionario) => {
-    models.delete(id_funcionario);
+  removerFuncionario: (req, res) => {
+    const { id } = req.query;
+    models.delete(id);
+    res.redirecr("/");
   }
 };
 
