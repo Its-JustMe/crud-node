@@ -24,7 +24,7 @@ const controller = {
     }
   },
 
-  adicionarFuncionario: (req, res) => {
+  adicionarFuncionario: async (req, res) => {
     const erros = validationResult(req);
 
     if (!erros.isEmpty()) {
