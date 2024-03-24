@@ -16,7 +16,7 @@ router.get("/editar", function (req, res) {
 });
 
 router.get("/excluir", function (req, res) {
-  controller.exibirFuncionario(req, res, 'confirm-delete')
+  controller.exibirFuncionario(req, res, 'confirm-delete');
 });
 
 router.post("/create", controller.regrasValidacao, function (req, res) {
