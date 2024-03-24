@@ -135,11 +135,10 @@ const controller = {
   },
 
   removerFuncionario: async (req, res) => {
-    const id= parseInt(req.body.id_funcionario);
+    const id = parseInt(req.body.id_funcionario);
 
     try {
       const results = await models.delete(id);
-      return res.json({id: req.body.id_funcionario, msg: results});
     } catch (e) {
       res.json({
         erro: 'Falha ao acessar os dados.'
