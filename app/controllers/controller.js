@@ -91,7 +91,7 @@ const controller = {
     }
 
     try {
-      const results = await update(dados_form, req.body.id_funcionario);
+      const results = await models.update(dados_form, req.body.id_funcionario);
     } catch (e) {
       res.json({
         erro: 'Falha ao acessar os dados.'
@@ -123,10 +123,18 @@ const controller = {
     }
   },
 
-  removerFuncionario: (req, res) => {
+  removerFuncionario: async (req, res) => {
     const { id } = req.query;
-    models.delete(id);
-    res.redirecr("/");
+
+    try {
+      const results = await models.delete(id);
+    } catch (e) {
+      res.json({
+        erro: 'Falha ao acessar os dados.'
+      });
+    }
+
+    res.redirect("/");
   }
 };
 

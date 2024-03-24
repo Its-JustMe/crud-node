@@ -52,4 +52,4 @@ const models = {
   
 };
     
-module.exports = models
+module.exports = models;
