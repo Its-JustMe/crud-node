@@ -35,15 +35,26 @@ button {
   justify-content: space-between;
   margin: auto 12px;
 }
-  
-#new {
+
+.btn-table, #new {
   font-size: 16px;
   padding: 8px;
   border-radius: 5px;
   border: none;
-  color: white;
-  background-color: rgb(57, 57, 226);
+  color: #fff;
   font-family: "Typo Formal";
+}
+
+#new {
+  background-color: #34a52e;
+}
+
+.edit {
+  background-color: #3939e2;
+}
+
+.delete {
+  background-color: #d01717;
 }
   
 .divTable {

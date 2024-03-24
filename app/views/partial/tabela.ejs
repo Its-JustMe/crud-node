@@ -22,10 +22,12 @@
             </th>
 
             <th class="acao" onclick=<%="window.location='/editar?id="+ funcionario.id_funcionario+"'" %>>
-              <button>Editar</button>
+              <button class="btn-table edit">Editar</button>
             </th>
             <th class="acao" onclick=<%=" window.location='/excluir?id="+ funcionario.id_funcionario+"'" %>>
-              <button>Excluir</button>
+              <form action="/delete" method="post">
+                <button class="btn-table delete" type="submit">Excluir</button>
+              </form>
             </th>
           </tr> 
         <% }; %>
