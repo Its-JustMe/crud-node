@@ -15,7 +15,10 @@
   <main class="container">
     <article class="header">
       <h1>Cadastro de Funcionários</h1>
-      <button onclick="window.location='/incluir'" id="new">Incluir</button>
+      <button onclick="window.location='/incluir'" class="btn-table" id="new">
+        <span>Incluir</span>
+        <i class='bx bxs-user-plus'></i>
+      </button>
     </article>
     <%- include(`../partial/${pagina}`)%>
 

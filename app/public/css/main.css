@@ -12,6 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: rgba(0,0,0,0.1);
+    overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -19,6 +20,13 @@ a {
 
 button {
     cursor: pointer;
+}
+
+.btn-table > i {
+  display: none;
+}
+.btn-table > span {
+  display: block;
 }
   
 .container {
@@ -119,9 +127,17 @@ tbody tr td.acao {
     font-size: 10px;
   }
   
-  #new {
+  #new, .btn-table {
     padding: 5px;
     font-size: 10px;
+  }
+
+
+  .btn-table > i {
+    display: block;
+  }
+  .btn-table > span {
+    display: none;
   }
   
   thead tr th.acao {
@@ -194,25 +210,6 @@ tbody tr td.acao {
   border: none;
   background-color: rgb(57, 57, 226);
   color: white;
-}
-  
-.active {
-  display: flex;
-}
-  
-.active .modal {
-  animation: modal .4s;
-}
-  
-@keyframes modal {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -60px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
 }
   
 td button {

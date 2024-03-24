@@ -10,24 +10,30 @@
         <% if (lista_funcionarios) { %>
             <% for (let funcionario of lista_funcionarios) { %>
             <tr>
-              <th>
+              <td>
                 <%= funcionario.nome_funcionario %>
-              </th>
+              </td>
 
-              <th>
+              <td>
                 <%= funcionario.funcao_funcionario %>
-              </th>
+              </td>
 
-              <th>
+              <td>
                 R$ <%= String(funcionario.salario_funcionario).replace('.', ',') %>
-              </th>
+              </td>
 
-              <th class="acao" onclick=<%="window.location='/editar?id="+ funcionario.id_funcionario+"'" %>>
-                <button class="btn-table edit">Editar</button>
-              </th>
-              <th class="acao" onclick=<%="window.location='/excluir?id="+ funcionario.id_funcionario+"'" %>>
-                <button class="btn-table delete">Remover</button>
-              </th>
+              <td class="acao" onclick=<%="window.location='/editar?id="+ funcionario.id_funcionario+"'" %>>
+                <button class="btn-table edit">
+                  <span>Editar</span>
+                  <i class='bx bxs-edit-alt'></i>
+                </button>
+              </td>
+              <td class="acao" onclick=<%="window.location='/excluir?id="+ funcionario.id_funcionario+"'" %>>
+                <button class="btn-table delete">
+                  <span>Remover</span>
+                  <i class='bx bxs-trash'></i>
+                </button>
+              </td>
             </tr> 
           <% }; %>
         <% } %>
