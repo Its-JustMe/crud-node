@@ -19,7 +19,7 @@ a {
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .btn-table > i {
@@ -127,9 +127,14 @@ tbody tr td.acao {
     font-size: 10px;
   }
   
-  #new, .btn-table {
+  .btn-table {
     padding: 2px;
     font-size: 13px;
+  }
+
+  #new {
+    padding: 6px;
+    font-size: 18px;
   }
 
 
