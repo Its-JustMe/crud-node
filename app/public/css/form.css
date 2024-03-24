@@ -9,7 +9,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all .8s;
-  font-size: 1.5em;
 
   font-family: "Typo Formal";
 }
@@ -53,12 +52,15 @@ legend {
   font-size: 1.7em;
   color: #575656;
 }
+label {
+  font-size: larger;
+}
 input {
   border: 0;
   border-bottom: 2px solid #000;
   padding: 5px;
   width: 95%;
-  font-size: large;
+  font-size: larger;
   position: relative;
 }
 #warnings {
@@ -80,7 +82,7 @@ input {
   border-radius: 4px;
   cursor: pointer;
   background: #eeeeee;
-  font-size: 0.6em;
+  font-size: 0.8em;
 }
 .form-btn:hover {
   background: #e2e2e2;
