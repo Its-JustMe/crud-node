@@ -9,6 +9,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all .8s;
+  font-size: 1.5em;
 
   font-family: "Typo Formal";
 }
@@ -21,7 +22,7 @@ input[disabled] {
 }
 
 p {
-  font-size: 1.1em;
+  font-size: 1.3em;
   text-align: center;
 }
 
@@ -49,7 +50,7 @@ fieldset {
   transform: translateY(-1.8em);
 }
 legend {
-  font-size: 1.5em;
+  font-size: 1.7em;
   color: #575656;
 }
 input {

@@ -48,8 +48,7 @@ const models = {
         } catch (error) {
             return error;
         }  
-    },
-  
+    }
 };
     
 module.exports = models;
