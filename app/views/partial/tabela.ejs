@@ -24,7 +24,7 @@
             <th class="acao" onclick=<%="window.location='/editar?id="+ funcionario.id_funcionario+"'" %>>
               <button class="btn-table edit">Editar</button>
             </th>
-            <th class="acao" onclick=<%=" window.location='/excluir?id="+ funcionario.id_funcionario+"'" %>>
+            <th class="acao">
               <form action="/delete?id=<%= funcionario.id_funcionario %>" method="post">
                 <button class="btn-table delete" type="submit">Excluir</button>
               </form>
