@@ -128,13 +128,12 @@ const controller = {
 
     try {
       const results = await models.delete(id);
+      res.redirect("/");
     } catch (e) {
       res.json({
         erro: 'Falha ao acessar os dados.'
       });
     }
-
-    res.redirect("/");
   }
 };
 
