@@ -43,7 +43,7 @@ const models = {
 
     delete: async (id) => {
         try {
-            const [linhas] = await pool.query('UPDATE funcionarios WHERE id_funcionario = ?', [id]);
+            const [linhas] = await pool.query('DELETE funcionarios WHERE id_funcionario = ?', [id]);
             return linhas;
         } catch (error) {
             return error;
