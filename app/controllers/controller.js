@@ -135,7 +135,6 @@ const controller = {
   },
 
   removerFuncionario: async (req, res) => {
-    return res.send(req.body.id_funcionario);
     try {
       const results = await models.delete(req.body.id_funcionario);
     } catch (e) {
