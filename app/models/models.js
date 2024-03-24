@@ -44,7 +44,7 @@ const models = {
     delete: async (id) => {
         try {
             const [linhas] = await pool.query('DELETE funcionarios WHERE id_funcionario = ?', [id]);
-            return res.json({id: id, msg: linhas});
+            return linhas;
         } catch (error) {
             return error;
         }  
