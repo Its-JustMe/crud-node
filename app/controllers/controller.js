@@ -139,7 +139,7 @@ const controller = {
 
     try {
       const results = await models.delete(id);
-      return res.send('USUÁRIO REMOVIDO');
+      return res.send(results);
     } catch (e) {
       res.json({
         erro: 'Falha ao acessar os dados.'
