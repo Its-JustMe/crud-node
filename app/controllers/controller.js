@@ -101,25 +101,25 @@ const controller = {
     res.redirect("/");
   },
 
-  exibirFuncionario: async (req, res) => {
+  exibirFuncionario: async (req, res, pagina) => {
     const { id } = req.query;
     try {
       const funcionario = await models.findId(id);
 
-      pagina === 'form' 
-        ? res.render("pages/form", {
-            funcao: 'Editar dados do funcionário', 
-            acao: 'update',
-            dados: {
-              id_funcionario: id,
-              nome_funcionario: funcionario[0].nome_funcionario,
-              funcao_funcionario: funcionario[0].funcao_funcionario,
-              salario_funcionario: funcionario[0].salario_funcionario,
-            },
-            listaErros: null,
-        })
-
-        : res.render("pages/confirm-delete", {
+      if (pagina === 'form') {
+        res.render("pages/form", {
+          funcao: 'Editar dados do funcionário', 
+          acao: 'update',
+          dados: {
+            id_funcionario: id,
+            nome_funcionario: funcionario[0].nome_funcionario,
+            funcao_funcionario: funcionario[0].funcao_funcionario,
+            salario_funcionario: funcionario[0].salario_funcionario,
+          },
+          listaErros: null,
+        });
+      } else {
+        res.render("pages/confirm-delete", {
           dados: {
             id_funcionario: id,
             nome_funcionario: funcionario[0].nome_funcionario,
@@ -127,6 +127,7 @@ const controller = {
             salario_funcionario: funcionario[0].salario_funcionario,
           }
         });
+      }
     } catch (e) {
       console.log(e);
       res.json({ erro: "Falha ao acessar dados" });
