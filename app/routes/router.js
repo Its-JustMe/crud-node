@@ -12,11 +12,11 @@ router.get("/incluir", function (req, res) {
 });
 
 router.get("/editar", function (req, res) {
-  controller.exibirFuncionario(req, res);
+  controller.exibirFuncionario(req, res, 'form');
 });
 
 router.get("/excluir", function (req, res) {
-  
+  controller.exibirFuncionario(req, res, 'confirm-delete')
 });
 
 router.post("/create", controller.regrasValidacao, function (req, res) {
