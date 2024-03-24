@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remover <%= dados.nome_funcionario %></title>
+  <link rel="stylesheet" href="/css/form.css" type="text/css">
+</head>
+<body>
+    <form action="/delete" method="post" id="formulario">
+        <fieldset>
+            <legend>Remover <%= funcionario.nome_funcionario %></legend>
+
+            <input type="hidden" name="id_funcionario" value="<%= dados.id_funcionario %>">
+    
+            <label for="nome">Nome</label>
+            <input type="text" name="nome_funcionario" id="nome" value="<%= dados.nome_funcionario %>" disabled>
+    
+            <label for="funcao">Função</label>
+            <input type="text" name="funcao_funcionario" id="funcao" value="<%= dados.funcao_funcionario %>" disabled>
+    
+            <label for="funcao">Salário</label>
+            <input type="number" name="salario_funcionario" id="salario" value="<%= dados.salario_funcionario %>" step="0.010" disabled>
+            
+            <p>Deseja realmente <strong>remover</strong> este funcionário?</p>
+
+            <div>
+                <button class="form-btn" type="submit">Sim, remover</button>
+                <button class="form-btn" onclick="window.location='/'">Voltar</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -15,8 +15,8 @@ router.get("/editar", function (req, res) {
   controller.exibirFuncionario(req, res);
 });
 
-router.get("/delete", function (req, res) {
-  controller.removerFuncionario(req, res);
+router.get("/excluir", function (req, res) {
+  
 });
 
 router.post("/create", controller.regrasValidacao, function (req, res) {
@@ -25,6 +25,10 @@ router.post("/create", controller.regrasValidacao, function (req, res) {
 
 router.post("/update", controller.regrasValidacao, function (req, res) {
   controller.atualizarDadosFuncionario(req, res);
+});
+
+router.post("/delete", function (req, res) {
+  controller.removerFuncionario(req, res);
 });
 
 module.exports = router;
