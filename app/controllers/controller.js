@@ -5,13 +5,18 @@ const controller = {
   regrasValidacao: [
     body(
       'nome_funcionario'
-      ).isAlpha('pt-BR', {ignore: ' '}).withMessage('Por favor, insira um nome válido.'),
+      ).trim()
+        .notEmpty()
+          .isAlpha('pt-BR', {ignore: ' '}).withMessage('Por favor, insira um nome válido.'),
     body(
       'funcao_funcionario'
-      ).isAlpha('pt-BR', {ignore: ' '}).withMessage('Por favor, insira uma função válida.'),
+      ).trim()
+        .notEmpty()
+          .isAlpha('pt-BR', {ignore: [' ', '-']}).withMessage('Por favor, insira uma função válida.'),
     body(
       'salario_funcionario'
-    ).isNumeric().withMessage('Insira um valor de salário válido')
+    ).notEmpty()
+      .isNumeric().withMessage('Insira um valor de salário válido')
   ],
 
   listarFuncionarios: async (req, res) => {
