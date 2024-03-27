@@ -123,7 +123,7 @@ const controller = {
           },
           listaErros: null,
         });
-      } else {
+      } else if (pagina === 'confirm-delete') {
         res.render("pages/confirm-delete", {
           dados: {
             id_funcionario: id,
@@ -132,6 +132,15 @@ const controller = {
             salario_funcionario: funcionario[0].salario_funcionario,
           }
         });
+      } else {
+        res.render("pages/index", 
+          { 
+            lista_funcionarios: funcionario[0], 
+            pagina: 'tabela', 
+            dados: null, 
+            listaErros: null 
+          }
+      );
       }
     } catch (e) {
       console.log(e);
