@@ -6,16 +6,16 @@ const controller = {
     body(
       'nome_funcionario'
       ).trim()
-        .notEmpty().withMessage('Preencha o campo vazio.')
-          .isAlpha('pt-BR', {ignore: ' '}).withMessage('Por favor, insira um nome válido.'),
+        .notEmpty().withMessage('Preencha o campo vazio')
+          .isAlpha('pt-BR', {ignore: ' '}).withMessage('Por favor, insira um nome válido'),
     body(
       'funcao_funcionario'
       ).trim()
-        .notEmpty().withMessage('Preencha o campo vazio.')
-          .isAlpha('pt-BR', {ignore: [' ', '-']}).withMessage('Por favor, insira uma função válida.'),
+        .notEmpty().withMessage('Preencha o campo vazio')
+          .isAlpha('pt-BR', {ignore: [' ', '-']}).withMessage('Por favor, insira um nome de função válido'),
     body(
       'salario_funcionario'
-    ).notEmpty().withMessage('Preencha o campo vazio.')
+    ).notEmpty().withMessage('Preencha o campo vazio')
       .isNumeric().withMessage('Insira um valor de salário válido')
   ],
 

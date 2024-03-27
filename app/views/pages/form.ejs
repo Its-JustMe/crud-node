@@ -43,4 +43,7 @@
         </fieldset>
     </form>
 </body>
+<script>
+    document.querySelectorAll('input').forEach(ipt => ipt.onfocus = ipt.classList.remove('invalid'));
+</script>
 </html>
