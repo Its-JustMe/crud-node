@@ -34,7 +34,7 @@ const models = {
 
     read: async (nome) => {
         try {
-            const [linhas, campos] = await pool.query('SELECT nome_funcionario FROM funcionarios WHERE nome_funcionario = ?', [nome]);
+            const [linhas, campos] = await pool.query('SELECT * FROM funcionarios WHERE nome_funcionario = ?', [nome]);
             return linhas;
         } catch (error) {
             return null;
