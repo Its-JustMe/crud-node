@@ -11,10 +11,11 @@
 </head>
 <body>
     <% const msgErro = { "nome_funcionario": "", "funcao_funcionario": "", "salario_funcionario": "" }; %>
-        
+    <% const invalidClass = { "nome_funcionario": "", "funcao_funcionario": "", "salario_funcionario": "" }
     <% if(listaErros){ %>
         <% listaErros.errors.forEach((itemErro)=>{ %>
             <% msgErro[itemErro.path] = itemErro.msg; %>
+            <% invalidClass[itemErro.path] = 'invalid' %>
         <% }); %>
     <% } %>
 
@@ -25,15 +26,15 @@
             <input type="hidden" name="id_funcionario" value="<%= dados.id_funcionario %>">
     
             <label for="nome">Nome</label>
-            <input type="text" name="nome_funcionario" id="nome" value="<%= dados.nome_funcionario %>">
+            <input type="text" class="<%= invalidClass.nome_funcionario %>" name="nome_funcionario" id="nome" value="<%= dados.nome_funcionario %>">
             <span><%= msgErro.nome_funcionario %></span>
 
             <label for="funcao">Função</label>
-            <input type="text" name="funcao_funcionario" id="funcao" value="<%= dados.funcao_funcionario %>">
+            <input type="text" class="<%= invalidClass.funcao_funcionario %>" name="funcao_funcionario" id="funcao" value="<%= dados.funcao_funcionario %>">
             <span><%= msgErro.funcao_funcionario %></span>
 
             <label for="funcao">Salário</label>
-            <input type="number" name="salario_funcionario" id="salario" value="<%= dados.salario_funcionario %>" step="0.010">
+            <input type="number" class="<%= invalidClass.salario_funcionario %>" name="salario_funcionario" id="salario" value="<%= dados.salario_funcionario %>" step="0.010">
             <span><%= msgErro.salario_funcionario %></span>
 
             <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 15px;">
