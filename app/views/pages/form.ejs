@@ -14,11 +14,12 @@
         const msgErro = {"nome_funcionario":"", funcao_funcionario: "", salario_funcionario: ""};
         
         if(listaErros){
-
             listaErros.errors.forEach((itemErro)=>{
                 msgErro[itemErro.path] = itemErro.msg;
             });
         }
+
+        console.log(msgErro);
     %>
 
     <form action="/<%=acao%>" method="post" id="formulario">
