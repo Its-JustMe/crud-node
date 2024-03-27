@@ -87,3 +87,9 @@ input {
 .form-btn:hover {
   background: #e2e2e2;
 }
+
+span {
+  color: #ff0000;
+  font-style:  italic;
+  font-size: medium;
+}
