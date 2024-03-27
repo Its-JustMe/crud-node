@@ -20,7 +20,7 @@ router.get("/excluir", function (req, res) {
 });
 
 router.get("/read", controller.regrasValidacao, function (req, res) {
-  controller.exibirFuncionario(req, res, 'index');
+  controller.procurarFuncionario(req, res);
 })
 
 router.post("/create", controller.regrasValidacao, function (req, res) {

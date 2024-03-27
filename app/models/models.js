@@ -32,6 +32,15 @@ const models = {
         }  
     },
 
+    read: async (nome) => {
+        try {
+            const [linhas, campos] = await pool.query('SELECT nome_funcionario FROM funcionarios WHERE nome_funcionario = ?', [nome]);
+            return linhas;
+        } catch (error) {
+            return null;
+        }
+    },
+
     update: async (dadosForm, id) => {
         try {
             const [linhas, campos] = await pool.query('UPDATE funcionarios SET ? WHERE id_funcionario = ?', [dadosForm, id]);
