@@ -10,17 +10,15 @@
     <title><%= funcao %></title>
 </head>
 <body>
-    <%
-        const msgErro = {"nome_funcionario":"", funcao_funcionario: "", salario_funcionario: ""};
+    <% const msgErro = {"nome_funcionario":"", funcao_funcionario: "", salario_funcionario: ""}; %>
         
-        if(listaErros){
-            listaErros.errors.forEach((itemErro)=>{
-                msgErro[itemErro.path] = itemErro.msg;
-            });
-        }
+    <% if(listaErros){ %>
+        <% listaErros.errors.forEach((itemErro)=>{ %>
+            <% msgErro[itemErro.path] = itemErro.msg; %>
+        <% }); %>
+    <% } %>
 
-        console.log(msgErro);
-    %>
+    <% console.log(msgErro);%>
 
     <form action="/<%=acao%>" method="post" id="formulario">
         <fieldset>
