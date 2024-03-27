@@ -123,7 +123,7 @@ const controller = {
           },
           listaErros: null,
         });
-      } else if (pagina === 'confirm-delete') {
+      } else {
         res.render("pages/confirm-delete", {
           dados: {
             id_funcionario: id,
@@ -137,27 +137,6 @@ const controller = {
       console.log(e);
       res.json({ erro: "Falha ao acessar dados" });
     }
-  },
-
-  procurarFuncionario: async (req, res) => {
-    const nome = req.body.nome_funcionario;
-
-    try {
-      const results = await models.read(nome);
-    } catch (e) {
-      res.json({
-        erro: 'Falha ao acessar os dados.'
-      });
-    }
-
-    res.render("pages/index", 
-        { 
-          lista_funcionarios: [results], 
-          pagina: 'tabela', 
-          dados: null, 
-          listaErros: null 
-        }
-      );
   },
 
   removerFuncionario: async (req, res) => {
