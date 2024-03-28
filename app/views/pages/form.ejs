@@ -11,11 +11,11 @@
 </head>
 <body>
     <% const msgErro = { "nome_funcionario": "", "funcao_funcionario": "", "salario_funcionario": "" }; %>
-    <% const invalidClass = { "nome_funcionario": "", "funcao_funcionario": "", "salario_funcionario": "" }
+    <% const invalidClass = { "nome_funcionario": "", "funcao_funcionario": "", "salario_funcionario": "" } %>
     <% if(listaErros){ %>
         <% listaErros.errors.forEach((itemErro)=>{ %>
             <% msgErro[itemErro.path] = itemErro.msg; %>
-            <% invalidClass[itemErro.path] = 'invalid' %>
+            <% invalidClass[itemErro.path] = 'invalid'; %>
         <% }); %>
     <% } %>
 
