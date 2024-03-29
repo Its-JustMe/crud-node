@@ -1,6 +1,6 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=2f7cd4&height=120&section=header"/>
 
-# CRUD com NodeJS
+# Sistema de Gerenciamento de Funcionários com NodeJS e MySQL
 
 <img src="./app/public/img/img-projeto.png" height="280em">
 
@@ -11,12 +11,12 @@
     <li>É possível que o usuário inclua, consulte, edite ou remova funcionários da base de dados do site. </li>
     <li> Desenvolvido utilizando as seguintes linguagens/ferramentas: 
         <ul>
-            <li> <strong>NodeJS</strong> como linguagem back-end
-            <li> <strong>Framework ExpressJS</strong> para a construção do servidor
-            <li> <strong>Middleware Functions do Express-validator</srong> para a validação de dados do usuário
-            <li> <strong>Linguagem MySQL</strong> para a construção do Banco de Dados
-            <li> <strong>Plataforma Render</strong> para a hospedagem da aplicação na nuvem.
-            <li> <strong>Plataforma Clever Cloud</strong> para a hospedagem do Banco de Dados
+            <li> <strong>NodeJS</strong> como linguagem back-end </li>
+            <li> <strong>Framework ExpressJS</strong> para a construção do servidor</li>
+            <li> <strong>Middleware Functions do Express-validator</strong> para a validação de dados do usuário</li>
+            <li> <strong>Linguagem MySQL</strong> para a construção do Banco de Dados</li>
+            <li> <strong>Plataforma Render</strong> para a hospedagem da aplicação na nuvem.</li>
+            <li> <strong>Plataforma Clever Cloud</strong> para a hospedagem do Banco de Dados</li>
         </ul>
     </li>
 </ul>
@@ -27,8 +27,8 @@
 
 <p>Caso o link acima não esteja disponível, você pode acessar localmente em sua máquina, seguindo os seguintes passos:</p>
 <ul>
-    <li> Baixe o repositório e extraia os arquivos
-    <li> No terminal, execute os comandos:
+    <li> Baixe o repositório e extraia os arquivos</li>
+    <li> No terminal, execute os comandos:</li>
 
 ```shell
 npm install
