@@ -15,6 +15,8 @@
             <li> <strong>Framework ExpressJS</strong> para a construção do servidor</li>
             <li> <strong>Middleware Functions do Express-validator</strong> para a validação de dados do usuário</li>
             <li><strong>Template Engine EJS</strong> para renderizar as páginas de forma dinâmica</li>
+            <li><strong>Linguagem CSS</strong> para estilizar as páginas e criar um design mais agradável e responsivo</li>
+            <li><strong>Biblioteca Boxicons</strong> para adicionar ícones em telas de dispositivos móveis</li>
             <li><strong>Dependências Mysql2 e dotenv</strong> para realizar a conexão do Servidor com o Banco de Dados</li>
             <li> <strong>Linguagem MySQL</strong> para a construção do Banco de Dados</li>
             <li> <strong>Plataforma Render</strong> para a hospedagem da aplicação na nuvem.</li>
