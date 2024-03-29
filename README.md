@@ -2,7 +2,7 @@
 
 # Sistema de Gerenciamento de Funcionários com NodeJS e MySQL
 
-<img src="./app/public/img/img-projeto.png" height="280em">
+<img src="./app/public/img/img-projeto.png" height="300em">
 <div>
 <img src="./app/public/img/pagina-responsiva.jpeg" height="280em">
 <img src="./app/public/img/pagina-delete.png" height="280em">
