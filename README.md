@@ -8,7 +8,7 @@
 <img src="./app/public/img/pagina-delete.png" height="280em">
 </div>
 
-## Sobre o Projeto
+## ➢ Sobre o Projeto
 
 <ul>
     <li>Este projeto consiste em uma aplicação CRUD fictícia de cadastro de diferentes funcionários.</li>
@@ -29,7 +29,7 @@
     </li>
 </ul>
 
-### Acesso
+### ➢ Acesso
 
 <p> Você pode acessar a página através deste link: https://crud-node-2rip.onrender.com </p>
 
