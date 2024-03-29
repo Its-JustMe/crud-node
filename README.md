@@ -14,6 +14,8 @@
             <li> <strong>NodeJS</strong> como linguagem back-end </li>
             <li> <strong>Framework ExpressJS</strong> para a construção do servidor</li>
             <li> <strong>Middleware Functions do Express-validator</strong> para a validação de dados do usuário</li>
+            <li><strong>Template Engine EJS</strong> para renderizar as páginas de forma dinâmica</li>
+            <li><strong>Dependências Mysql2 e dotenv</strong> para realizar a conexão do Servidor com o Banco de Dados</li>
             <li> <strong>Linguagem MySQL</strong> para a construção do Banco de Dados</li>
             <li> <strong>Plataforma Render</strong> para a hospedagem da aplicação na nuvem.</li>
             <li> <strong>Plataforma Clever Cloud</strong> para a hospedagem do Banco de Dados</li>
