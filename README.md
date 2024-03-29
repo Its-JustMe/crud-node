@@ -38,3 +38,5 @@ node app.js
 
 <li>Acesse em um navegador pelo endereço <b>localhost:3000</b></li>
 </ul>
+
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=2f7cd4&height=120&section=footer"/>
