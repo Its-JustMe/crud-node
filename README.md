@@ -2,7 +2,7 @@
 
 # CRUD com NodeJS
 
-<img src="./app/public/img/img-projeto.png" width="140em">
+<img src="./app/public/img/img-projeto.png" width="280em">
 
 ## Sobre o Projeto
 
@@ -31,10 +31,8 @@
     <li> No terminal, execute os comandos:
 
 ```shell
-
 npm install
-node app.js
-    
+node app.js   
 ```
 
 
