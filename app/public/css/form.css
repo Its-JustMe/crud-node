@@ -83,6 +83,7 @@ input {
   cursor: pointer;
   background: #eeeeee;
   font-size: 0.8em;
+  font-family: Arial;
   text-decoration: none;
   text-align: center;
   display: flex;
