@@ -83,6 +83,12 @@ input {
   cursor: pointer;
   background: #eeeeee;
   font-size: 0.8em;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
 }
 .form-btn:hover {
   background: #e2e2e2;

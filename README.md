@@ -1,7 +1,4 @@
-Para adicionar as dependências abra o terminal no VS Code
-e digite:
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=2f7cd4&height=120&section=header"/>
 
-**** npm config set strict-ssl false
-*para liberar o proxy(se necessário)
+# CRUD com NodeJS
 
-**** npm install
