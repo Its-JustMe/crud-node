@@ -2,7 +2,7 @@
 
 # CRUD com NodeJS
 
-<img src="./app/public/img/img-projeto.png" width="280em">
+<img src="./app/public/img/img-projeto.png" height="280em">
 
 ## Sobre o Projeto
 
