@@ -2,7 +2,7 @@
 
 # CRUD com NodeJS
 
-<img src="./app/public/img/img-projeto.png" width="90em">
+<img src="./app/public/img/img-projeto.png" width="200em">
 
 ## Sobre o Projeto
 
@@ -30,11 +30,12 @@
     <li> Baixe o repositório e extraia os arquivos
     <li> No terminal, execute os comandos:
 
-    ``` shell
+```shell
+
     npm install
     node app.js
     
-    ```
+```
 
 
 <li>Acesse em um navegador pelo endereço <b>localhost:3000</b></li>
