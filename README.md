@@ -31,7 +31,7 @@
 
 ### ➢ Acesso
 
-<p> Você pode acessar a página através deste link: https://crud-node-2rip.onrender.com </p>
+<p> Você pode acessar a página através deste link: https://crud-node-iq7b.onrender.com</p>
 
 <p>Caso o link acima não esteja disponível, você pode acessar localmente em sua máquina, seguindo os seguintes passos:</p>
 <ul>
